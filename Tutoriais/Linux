@@ -1,0 +1,117 @@
+---------------------------------------------------------
+FOREMOST
+# umount /dev/sdc1
+# mkdir /media/hdd/recuperados
+# cd /media/hdd
+# dd if=/dev/sdc1 of=imagem.raw
+# foremost -v -t all -i imagem.raw -o recuperados 
+# chown -R $USER:$USER recuperados
+[-T]=timestamp [-v]=verboso [-t]=tipo [-i]=origem [-o]=saída 
+---------------------------------------------------------# mkdir /media/rec
+# mount /dev/sda1 /media/rec
+# cd /media/rec
+# dd if=/dev/sdc of=rec.raw >>>>>>>>>>>>>>>>>>>>>>>
+# foremost -t all -i rec.raw -o dados
+# chown -R $USER:$USER /media/rec/dados
+---------------------------------------------------------SCALPEL
+# apt-get install scalpel
+# cd /etc/scalpel/ vim scalpel.conf (descomente os arquivos)
+# scalpel rec.raw -o /media/hdd/recuperas
+---------------------------------------------------------PARTED
+# lsblk
+# parted /dev/sdx
+(parted) mklabel msdos
+(parted) mkpart primary fat32 1MiB 100%
+(parted) set 1 boot on
+(parted) quit
+# mkfs.vfat /dev/sdx1 
+---------------------------------------------------------SAFECOPY
+# apt-get install safecopy
+--recuperar arquivo de media montada:
+# safecopy /origem /destino
+# safecopy /dev/origem /dev/destino/diskimagem
+# safecopy /dev/origem /dev/destino/diskimagem -f 1* -R 8 -Z 2
+---------------------------------------------------------DISKINTERNALS LINUX READER
+Recuperar partições em formato RAW
+getdataback download
+---------------------------------------------------------INFORMAÇÕES DE HARDWARE
+# update-pciids
+# dmidecode
+---------------------------------------------------------FORMATANDO O DISCO
+# mkfs.ext4(ntfs) /dev/sdx
+---------------------------------------------------------MONTANDO O DISCO
+# lsblk         OU      # fdisk -l
+# mount /dev/sdx1 /media/dados
+# mount -t ext4 /dev/sdx1 /pasta
+MONTANDO A IMAGEM
+# mkdir -p /media/iso
+# mount -o loop imagem.iso /meida/iso
+---------------------------------------------------------LIMPANDO O DISCO
+# apt install wipe
+# wipe /dev/sdx1
+---------------------------------------------------------DESTRUINDO O DISCO
+# shred -vfz -n 10 /dev/sdx2
+[-n] qtde substituição [-f] permitir gravação [-u] truncar dados
+[-s] tamanho dos dados [-v] modo detalhado    [-z] adicionar zeros
+ 
+# dd if=/dev/zero of=/dev/sdx2 bs=512 count=1
+
+# scrub /dev/sdx1
+---------------------------------------------------------INFORMA O SISTEMA DE ARQUIVOS
+# blkid /dev/sdx1
+---------------------------------------------------------LINUX SEM INTERNET
+# iwconfig
+# iwlist wlp2s0 scan (wlp2s0--->nome da placa de rede)
+# iwconfig wlp2s0 essid Helena5G (Helena5G--->nome da rede)
+                   OU
+# rfkill list wlan|all
+# rfkill unblock wlan|all
+# service network-manager restart
+                  OU
+# apt-get update -y
+# apt-get install net-tools -y
+# echo "modprobe 8139too" | sudo tee -a /etc/modules
+                 SE NÃO FUNCIONAR:
+# echo "blacklist dell-rbtn" | sudo tee /etc/modprobe.d/dell-rbtn.conf
+# reboot
+---------------------------------------------------------INSTALANDO O SNAP NO MINT
+# rm /etc/apt/preferences.d/nosnap.pref
+# apt update
+# apt install snapd
+---------------------------------------------------------MUDANDO O NAVEGADOR PADRÃO
+# update-alternatives --config x-www-browser
+   	(aí é só escolher o número do navegador)
+---------------------------------------------------------
+GIT
+apt install git-all
+git --version
+
+VsCode
+wget "https://go.microsoft.com/fwlink/?LinkID=620884" -O vscode.tar.gz
+tar -vzxf vscode.tar.gz -C /opt/
+dpkg -i [arquivo-download]
+
+snap install code --classic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

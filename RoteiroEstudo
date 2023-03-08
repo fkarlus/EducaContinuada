@@ -1,0 +1,176 @@
+_________________________________________________________
+MATEMÁTICA
+--> Estatística----------->(Morettin)
+
+INFORMÁTICA
+--> JavaScript------------>(Daciuk|Guanabara|Diniz|Udemy)
+--> Linux----------------->(DosReis|Guanabara|Udemy)
+--> B.D------------------->(Elmasri)
+--> Python---------------->(DosReis|Guanabara|Diniz|Udemy)
+--> Linguagem R----------->(Udemy) 
+--> Linguagem C----------->(DosReis|Diniz|Udemy)
+--> Redes----------------->(Kurose)
+--> S.O------------------->(Tanenbaum)
+--> Web------------------->(DosReis|Guanabara|Diniz|Udemy)
+
+ALEMA
+--> AdministraçãoPública-->(Almeida)
+--> EstatutoDaAlema------->(Zanolla)
+--> Informática----------->(Carvalho)
+--> Legislação------------>(Girão)
+--> LRF------------------->(Mendes)
+--> RH-------------------->(Rennó)
+--> Português------------->(Figueiredo) 
+
+FINANÇAS
+--> InvestidorMestre------>(Moreira)
+--> Ambima---------------->(Udemy)
+
+Estatística(Morettin)-PDF
+JavaScript(Daciuk)-VIDEO
+Alema(Estratégia)-PDF
+Linux(Foca)-PDF
+BancoDeDados(Elmasri)-PDF
+InvestidorMestre(Moreira)-WEB
+ContabilidadePública(Feijó)-VIDEO
+KaliLinux(Mazucco)-WEB
+Filosofia(Pizzi)-WEB
+Git(Reis)-WEB
+Git(Guanabara)-WEB
+Git(Udemy)-WEB
+FundamentosDeComputação(Diniz)-WEB
+Python(Udemy)-WEB
+
+CONTABILIDADE
+-->ContabilidadePública--->(Feijó)
+-->ContabilidadeGeral----->(Sande)
+_________________________________________________________PLATAFORMAS
+--> NUTROR
+    --> Kali
+--> EDUARDO MOREIRA
+    --> InvestidorMestre
+--> ICL
+    --> Filosofia
+    --> Algoritmo
+    --> Sociologia
+    --> Música
+    --> Artes    
+--> Youtube
+    --> FÁBIO DOS REIS
+        --> [Git]
+        --> FundamentoDeMatemática
+        --> ConceitosBásicos
+        --> EstruturasDeDados
+        --> EletônicaBásica
+        --> EletrônicaDigital
+        --> Hardware
+        --> Arduino
+        --> Criptografia
+        --> Criptomoedas
+        --> DistribuiçõesLinux
+        --> LinuxAvançado
+        --> Lpic1
+        --> Vi
+        --> Redes
+        --> Wireless
+        --> WindowsServer
+        --> BancoDeDados
+        --> ModelagemDeDados
+        --> UML
+        --> MySQL
+        --> PostgreSQL
+        --> CiênciaDeDados
+        --> Virtualização
+        --> LógicaDeProgramação
+        --> Linguagem C
+        --> Python
+        --> MatemáticaComPython
+        --> DesenvolvimentoWeb
+        --> Node.js
+        --> EngenhariaDeSoftware
+        --> InteligênciaArtificial
+    --> GUANABARA
+        --> [Git]
+        --> BasesNuméricas
+        --> MarketingDigital
+        --> SEO
+        --> Hardware
+        --> Raspberry Pi
+        --> Html
+        --> JavaScript
+        --> Linux
+        --> LógicaDeProgramação
+        --> Python
+        --> Php
+        --> MySql
+        --> Word2016
+        --> Excel2016
+        --> Redes
+        --> WordPress
+        --> LGPD
+        --> SegurançaDaInformação 
+    --> DINIZ
+        --> [FundamentosComputação]
+        --> Assembly
+        --> JavaScript
+        --> Emuladores
+        --> Python
+        --> Vetores
+        --> Programação
+        --> Vim
+        --> Linguagem C
+        --> MachineLearning
+--> UDEMY
+    --> [Git]
+    --> Html
+    --> JavaScript
+    --> Pentest
+    --> Python
+    --> Linux
+    --> PostgreSQL
+    --> Redes
+    --> BlockChain
+    --> Ubuntu Server
+    --> XenServer
+    --> Windows Server
+    --> AWS
+    --> ShellScript
+    --> Word(13/16)
+    --> Calc
+    --> Macros Excel
+    --> Office
+    --> Marketing Digital
+    --> Lógica de Programação
+    --> Linguagem C
+    --> PhP Experts
+    --> Desenvolvedor Web    
+    --> Cobit 5
+    --> Gestão de Projetos
+    --> Desenho Realista
+    --> Pintura Artística
+    --> Linkedin
+    --> Gramática Inglesa
+    --> WordPress
+    --> Android
+    --> Aprendizado de Máquinas
+    --> Violão
+    --> Hipnose
+    --> Psicologia
+_________________________________________________________
+apt install git
+
+wget "https://go.microsoft.com/fwlink/?LinkID=620884" -O vscode.tar.gz
+tar -vzxf vscode.tar.gz -C /opt/
+dpkg -i [arquivo-download]
+
+snap install code --classic
+
+rm -Rf /opt/vscode/*
+rm -Rf /opt/vscode/code
+rm -Rf /usr/share/applications/vscode.desktop
+wget "https://go.microsoft.com/fwlink/?LinkID=620884" -O vscode.tar.gz
+tar -vzxf vscode.tar.gz -C /opt/
+mv /opt/VSCode*/ /opt/vscode/
+ln -sf /opt/vscode/code /usr/bin/code
+
+
